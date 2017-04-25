@@ -1,11 +1,11 @@
 'use strict';
-let textarea =$('message-field');
-let output =$('message-formatted');
-input.on('message-formatted', function(){
+let textarea =$(".message-field");
+let output =$(".message-formatted");
+textarea.on("input", function(){
   let value = textarea.val();
-//   $.replace(/\s+/g, ' ')
-//   $.trim(value);
-//   $.toLowerCase();
-  output.text(value);
-})
-console.log($)
+  function setFormatOfMessage(){
+    return value.replace(/\s+/g, ' ').toLowerCase().trim();
+  }
+  output.text(setFormatOfMessage(value));
+});
+// console.log(output.text(setFormatOfMessage(value)));
