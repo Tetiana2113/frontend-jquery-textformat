@@ -3,7 +3,7 @@ let textarea =$(".message-field");
 let output =$(".message-formatted");
 textarea.on("input", function(){
   let value = textarea.val();
-  function setFormatOfMessage(){
+  function setFormatOfMessage(value){
     return value.replace(/\s+/g, ' ').toLowerCase().trim();
   }
   output.text(setFormatOfMessage(value));
